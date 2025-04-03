@@ -1,0 +1,43 @@
+Initially this will be a one player vs. one Opponenet game;
+
+Deck.cs
+
+Constructor:
+1. Shuffles - (recursivley splits and combines?) Done
+2. Removes one random card Done
+3. Deals a card to each player 
+4. Randomly assigns first player
+
+Draw:
+Draw first card from shuffled Deck
+
+Discarded Deck:
+"Easy mode" keeps track of discarded Deck
+
+Player.cs
+Member fields: Held Card, Drawn Card;
+Constructor:
+1. Player number assignment
+
+Opponent.cs:
+Member fields: Held Card, Drawn Card, Confidence score;
+Constructor:
+1. Player number assignment
+
+GamePlay.cs
+Member fields: List of players
+
+?Turn.cs
+Methods:
+A method for each card that accepts a player, and opponent.
+
+
+Future releases:
+Should include multiple Opponent functionality (up to 3)
+Multiple players on a shared server
+
+Server:
+http://localhost:5000/api/players
+
+link to cors chat:
+https://chatgpt.com/share/67eea729-77c8-8006-9bdd-df5c74a7f869
