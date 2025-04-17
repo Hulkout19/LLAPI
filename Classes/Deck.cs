@@ -57,6 +57,7 @@ class Deck
     }
 
     public string getShuffledDeck(){
+        
         return this.shuffleDeck;
     }
 
@@ -64,11 +65,20 @@ class Deck
         string drawnCard;
         drawnCard = shuffledDeck[0];
         shuffledDeck.RemoveAt(0);
+        Console.WriteLine("drawnCard:" + drawnCard);
+        Console.WriteLine("The new start of the array:" + shuffledDeck[0]);
+        this.shuffleDeck = "";
         for (int i = 0; i < shuffledDeck.Count; i++)
         {
             this.shuffleDeck += shuffledDeck[i] + " ";
-            i++;
+
         }
+        // Console.WriteLine("Shuffled array: " + this.shuffledDeck);
+        // foreach (var item in this.shuffledDeck)
+        // {
+        //     Console.WriteLine(item);
+        // }
+        Console.WriteLine("shuffled string: "+this.shuffleDeck);
         return drawnCard;
     }
 

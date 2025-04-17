@@ -14,8 +14,6 @@ namespace MyApp.Namespace
             Game myGame = new Game();
             Dictionary<string,string> games = new Dictionary<string, string>();
             games.Add("Player1HeldCard",myGame.player1.getHeldCard());
-            games.Add("Cards Left",myGame.newDeck.getCardsLeft().ToString());
-            //string jsonString = JsonSerializer.Serialize(games);
             return new JsonResult(Ok(games));
         }
 
