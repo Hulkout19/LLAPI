@@ -5,10 +5,10 @@ class Deck
 {
     
     private String removedCard;
-    private List<string> drawPile = new List<string>(18);
+    private List<string> drawPile = new List<string>(16);
 
-    private List<string> shuffledDeck = new List<string>(17);
-    private List<string> discardedDeck = new List<string>(17);
+    private List<string> shuffledDeck = new List<string>(15);
+    private List<string> discardedDeck = new List<string>(15);
 
     public List<Player> playerList = new List<Player>();
 
@@ -17,8 +17,8 @@ class Deck
     public Deck()
     {
         Random rnd = new Random();
-        int random  = rnd.Next(0, 18);
-        this.drawPile = ["1","1","1","1","1","2","2","3","3","4","4","5","5","6","6","7","8","9"];
+        int random  = rnd.Next(0, 16);
+        this.drawPile = ["1","1","1","1","1","2","2","3","3","4","4","5","5","7","8","9"];
 
         this.removedCard = drawPile[random];
         drawPile.RemoveAt(random);
@@ -30,8 +30,8 @@ class Deck
     {
         this.playerList = players;
         Random rnd = new Random();
-        int random  = rnd.Next(0, 18);
-        this.drawPile = ["1","1","1","1","1","2","2","3","3","4","4","5","5","6","6","7","8","9"];
+        int random  = rnd.Next(0, 16);
+        this.drawPile = ["1","1","1","1","1","2","2","3","3","4","4","5","5","7","8","9"];
 
         this.removedCard = drawPile[random];
         drawPile.RemoveAt(random);
